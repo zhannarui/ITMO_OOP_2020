@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/zannarui/Desktop/ИТМО/OOP/lab1/Data.h
+IniException.h
+/Users/zannarui/Desktop/ИТМО/OOP/lab1/IniException.h
+utility
+-
+
+/Users/zannarui/Desktop/ИТМО/OOP/lab1/IniException.h
+exception
+-
+string
+-
+
+/Users/zannarui/Desktop/ИТМО/OOP/lab1/IniParser.h
+regex
+-
+unordered_map
+-
+fstream
+-
+Data.h
+/Users/zannarui/Desktop/ИТМО/OOP/lab1/Data.h
+IniException.h
+/Users/zannarui/Desktop/ИТМО/OOP/lab1/IniException.h
+
+/Users/zannarui/Desktop/ИТМО/OOP/lab1/main.cpp
+iostream
+-
+IniParser.h
+/Users/zannarui/Desktop/ИТМО/OOP/lab1/IniParser.h
+
