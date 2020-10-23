@@ -39,7 +39,7 @@ private:
                 currentLine.erase(currentLine.find('['), 1);
                 currentLine.erase(currentLine.find(']'), 1);
                 currentKey = currentLine;
-            } else if (isProperty(currentLine)) {
+            } else if (isProperty(currentLine) && currentKey != "") {
                 string name = currentLine;
                 string value = currentLine;
                 name.erase(name.find('=') - 1, name.length());
