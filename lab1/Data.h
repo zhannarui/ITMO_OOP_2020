@@ -12,41 +12,32 @@ public:
         this->_map = move(map);
     }
 
-    int TryGetInt(const string& sector, const string& property) {
-        if (!_map.count(sector)){
+    string IsExtinct(string section, string property) {
+        unordered_map<string, string> temp;
+        string value;
+        if(_map.count(section)){
+            temp = _map[section];
+            if(temp.count(property)){
+                return temp[property];
+            } else {
+                throw PropertyErrorException("Property is not presented in the collection");
+            }
+        } else {
             throw SectorErrorException("Sector is not presented in the collection");
-        } else if (!_map[sector].count(property)) {
-            throw PropertyErrorException("Property is not presented in the collection");
         }
-        try {
-            return stoi(_map[sector][property]);
-        } catch (exception ex) {
-            throw IniParseException("Failed to parse: int");
-        }
+    }
 
+    int TryGetInt(const string& sector, const string& property) {
+        return stoi(IsExtinct(sector, property));
     }
 
     double TryGetDouble(const string& sector, const string& property) {
-        if (!_map.count(sector)){
-            throw SectorErrorException("Sector is not presented in the collection");
-        } else if (!_map[sector].count(property)) {
-            throw PropertyErrorException("Property is not presented in the collection");
-        }
-        try {
-            return stod(_map[sector][property]);
-        } catch (exception ex) {
-            throw IniParseException("Failed to parse: double");
-        }
+        return stod(IsExtinct(sector, property));
     }
 
     string TryGetString(const string& sector, const string& property) {
-        if (!_map.count(sector)){
-            throw SectorErrorException("Sector is not presented in the collection");
-        } else if (!_map[sector].count(property)) {
-            throw PropertyErrorException("Property is not presented in the collection");
-        }
         try {
-            stod(_map[sector][property]);
+            stod(IsExtinct(sector,property));
         } catch (exception ex) {
             return _map[sector][property];
         }
