@@ -1,0 +1,11 @@
+/Users/zannarui/Desktop/ИТМО/OOP/lab2/Laba2/Laba2/bin/Debug/netcoreapp2.1/Laba2.deps.json
+/Users/zannarui/Desktop/ИТМО/OOP/lab2/Laba2/Laba2/bin/Debug/netcoreapp2.1/Laba2.runtimeconfig.json
+/Users/zannarui/Desktop/ИТМО/OOP/lab2/Laba2/Laba2/bin/Debug/netcoreapp2.1/Laba2.runtimeconfig.dev.json
+/Users/zannarui/Desktop/ИТМО/OOP/Lab2/Laba2/Laba2/bin/Debug/netcoreapp2.1/Laba2.dll
+/Users/zannarui/Desktop/ИТМО/OOP/Lab2/Laba2/Laba2/bin/Debug/netcoreapp2.1/Laba2.pdb
+/Users/zannarui/Desktop/ИТМО/OOP/Lab2/Laba2/Laba2/obj/Debug/netcoreapp2.1/Laba2.csprojAssemblyReference.cache
+/Users/zannarui/Desktop/ИТМО/OOP/Lab2/Laba2/Laba2/obj/Debug/netcoreapp2.1/Laba2.csproj.CoreCompileInputs.cache
+/Users/zannarui/Desktop/ИТМО/OOP/Lab2/Laba2/Laba2/obj/Debug/netcoreapp2.1/Laba2.AssemblyInfoInputs.cache
+/Users/zannarui/Desktop/ИТМО/OOP/Lab2/Laba2/Laba2/obj/Debug/netcoreapp2.1/Laba2.AssemblyInfo.cs
+/Users/zannarui/Desktop/ИТМО/OOP/Lab2/Laba2/Laba2/obj/Debug/netcoreapp2.1/Laba2.dll
+/Users/zannarui/Desktop/ИТМО/OOP/Lab2/Laba2/Laba2/obj/Debug/netcoreapp2.1/Laba2.pdb
