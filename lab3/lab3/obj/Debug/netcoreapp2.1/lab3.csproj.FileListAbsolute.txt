@@ -1,0 +1,11 @@
+/Users/zannarui/Desktop/ИТМО/OOP/lab3/lab3/bin/Debug/netcoreapp2.1/lab3.deps.json
+/Users/zannarui/Desktop/ИТМО/OOP/lab3/lab3/bin/Debug/netcoreapp2.1/lab3.runtimeconfig.json
+/Users/zannarui/Desktop/ИТМО/OOP/lab3/lab3/bin/Debug/netcoreapp2.1/lab3.runtimeconfig.dev.json
+/Users/zannarui/Desktop/ИТМО/OOP/lab3/lab3/bin/Debug/netcoreapp2.1/lab3.dll
+/Users/zannarui/Desktop/ИТМО/OOP/lab3/lab3/bin/Debug/netcoreapp2.1/lab3.pdb
+/Users/zannarui/Desktop/ИТМО/OOP/lab3/lab3/obj/Debug/netcoreapp2.1/lab3.csprojAssemblyReference.cache
+/Users/zannarui/Desktop/ИТМО/OOP/lab3/lab3/obj/Debug/netcoreapp2.1/lab3.csproj.CoreCompileInputs.cache
+/Users/zannarui/Desktop/ИТМО/OOP/lab3/lab3/obj/Debug/netcoreapp2.1/lab3.AssemblyInfoInputs.cache
+/Users/zannarui/Desktop/ИТМО/OOP/lab3/lab3/obj/Debug/netcoreapp2.1/lab3.AssemblyInfo.cs
+/Users/zannarui/Desktop/ИТМО/OOP/lab3/lab3/obj/Debug/netcoreapp2.1/lab3.dll
+/Users/zannarui/Desktop/ИТМО/OOP/lab3/lab3/obj/Debug/netcoreapp2.1/lab3.pdb
