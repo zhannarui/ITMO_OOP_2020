@@ -2,25 +2,12 @@ using System;
 
 namespace Lab4
 {
-    public class Point
+    public abstract class Point
     {
-        private string nameOfPoint;
-        private int sizeOfPoint;
-        private DateTime timeOfCreation;
-        
-        public Point(string name, int size)
-        {
-            nameOfPoint = name;
-            sizeOfPoint = size;
-            timeOfCreation = DateTime.Now;
-        }
-        public string GetName()
-        {
-            return nameOfPoint;
-        }
-        public int GetSize()
-        {
-            return sizeOfPoint;
-        }
+        public abstract int GetSize();
+        public abstract DateTime GetDate();
+        public abstract bool IsFull();
+        public abstract int GetDiffSize();
+        public abstract void GetLine();
     }
 }

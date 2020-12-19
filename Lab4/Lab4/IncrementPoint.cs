@@ -2,53 +2,46 @@ using System;
 
 namespace Lab4
 {
-    public class IncrementPoint : PointType
+    public abstract class IncrementPoint : Point
     {
-        
-        private int size;
-        private DateTime timeOfCreation;
-        private int countOfFiles;
-        private int deltaSize;
-        private int deltaCount;
-        
 
-        public IncrementPoint(int size, int deltaS, int count, int deltaC)
+        private int _size;
+        private int _diffSize;
+        private DateTime _date;
+
+        public override bool IsFull()
         {
-            this.size = size;
-            this.timeOfCreation = DateTime.Now;
-            this.countOfFiles = count;
-            this.deltaSize = deltaS;
-            this.deltaCount = deltaC;
+            return false;
         }
 
-        public override string GetType()
+        public IncrementPoint(int size, int diffSize)
         {
-            return "increment";
-        }
-
-        public override DateTime GetDate()
-        {
-            return timeOfCreation;
+            _size = size;
+            _diffSize = diffSize;
+            _date = DateTime.Now;
         }
 
         public override int GetSize()
         {
-            return size;
+            return _size;
         }
 
-        public override int GetCount()
+        public override int GetDiffSize()
         {
-            return countOfFiles;
+            return _diffSize;
         }
 
-        public override void GetInfo()
+        public override DateTime GetDate()
         {
-            Console.WriteLine("Creation time of increment point - " + timeOfCreation + ":");
-            Console.WriteLine("Size = " + size + " mb");
-            Console.WriteLine("Difference between current and previous points = " + deltaSize + " mb");
-            Console.WriteLine("Count of files = " + countOfFiles);
-            Console.WriteLine("Difference between count of files = " + deltaCount);
-            
+            return _date;
+        }
+
+
+        public override void GetLine()
+        {
+            Console.WriteLine("Date of creation - " + _date + ":");
+            Console.WriteLine("Size - " + _size);
+            Console.WriteLine("Difference between current and previous points — " + _diffSize);
         }
     }
 }

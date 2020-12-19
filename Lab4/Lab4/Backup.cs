@@ -1,48 +1,28 @@
-using System;
-using System.Collections.Generic;
-
 
 namespace Lab4
 {
     public class Backup
     {
-        private StorageWay type;
-        public Backup(StorageWay type)
+        private StorageWay _store;
+
+        public Backup(StorageWay store)
         {
-            this.type = type;
-        }
-        public void AddFullPoint(List<File> files)
-        {
-            type.CreateFullPoint(files);
-        }
-        public void AddIncrementPoint(List<File> files)
-        {
-            type.CreateIncrementPoint(files);
+            _store = store;
         }
 
-        public void Clear(Program.Clearing type, object num)
+        public void AddPoint(Point typeOfPoint)
         {
-            switch (type)
-            { 
-                case Program.Clearing.ByCount:
-                    this.type.ClearByCount(this.type.PointsCollection,(int)num);
-                    break;
-                case Program.Clearing.BySize:
-                    this.type.ClearBySize(this.type.PointsCollection,(int)num);
-                    break;
-                case Program.Clearing.ByDate:
-                    this.type.ClearByDate(this.type.PointsCollection,(DateTime)num);
-                    break;
-            }
+            _store.AddPoint(typeOfPoint);
         }
 
-        public void HybridClear(Dictionary<Program.Clearing, object> list , Program.Border lim)
+        public void DeletePoint(Remove typeOfRemove)
         {
-           type.ClearByHybrid(list,lim);
+            _store.DeletePoint(typeOfRemove);
         }
-        public void GetList()
+        
+        public void GetInfoAboutBackup()
         {
-            type.BackupInfo();
+            _store.GetInfo();
         }
     }
 }

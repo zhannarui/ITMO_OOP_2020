@@ -3,82 +3,70 @@ using System.Collections.Generic;
 
 namespace Lab4
 {
-    public class FullPoint : PointType
+    public class FullPoint : Point
     {
-        private List<Point> PointsList = new List<Point>();
-        private string name;
-        private DateTime timeOfCreation;
-        private int fullSize;
-        private int countOfFiles;
         
-        public FullPoint(string name, int size, int count)
-        {
-            this.name = name;
-            this.fullSize = size;
-            this.timeOfCreation = DateTime.Now;
-            this.countOfFiles = count;
-        }
+         private List<File> _files = new List<File>();
+         private string _name;
+         private DateTime _date;
+         private int _fullSize;
+         public override bool IsFull() { return true; }
 
-        public FullPoint(List<CopyOfFile> files)
-        {
-            foreach (var f in files)
-            {
-                this.PointsList.Add(new Point(f.GetNameOfCopy(), f.GetSizeOfCopy()));
-            }
+         public FullPoint(List<File> files)
+         {
+             foreach (var f in files)
+             {
+                 _files.Add(new File(f.GetName(), f.GetSize()));
+             }
+             for (var i = 0; i < files.Count; i++)
+             {
+                 _fullSize += _files[i].GetSize();
+             }
+             _date = DateTime.Now;
+         }
 
-            timeOfCreation = DateTime.Now;
-            for (var i = 0; i < files.Count; i++)
-            {
-                fullSize += PointsList[i].GetSize();
-            }
-            countOfFiles = PointsList.Count;
-        }
+         public override int GetSize()
+         {
+             if (_files.Count != 0)
+             {
+                 var size = 0;
+                 foreach (var f in _files)
+                 {
+                     size += f.GetSize();
+                 }
 
-        public override string GetType()
-        {
-            return "full";
-        }
+                 return size;
+             }
 
-        public override DateTime GetDate()
-        {
-            return timeOfCreation;
-        }
+             return _fullSize;
+         }
 
-        public override int GetSize()
-        {
-            if (PointsList.Count != 0)
-            {
-                var size = 0;
-                for (var i = 0; i < PointsList.Count; i++)
-                {
-                    size += PointsList[i].GetSize();
-                }
-
-                return size;
-            }
-            return fullSize;
-        }
-
-        public override int GetCount()
-        {
-            return countOfFiles;
-        }
-
-        public override void GetInfo()
-        {
-            Console.WriteLine("Creation time of full point - " + timeOfCreation + ":");
-            if (PointsList.Count != 0)
-            {
-                foreach (var p in PointsList)
-                {
-                    Console.WriteLine("Name:" + p.GetName() + ", size = " + p.GetSize() + " mb");
-                }
-            }
-            else
-            {
-                Console.WriteLine("Name: " + name + " ");
-                Console.WriteLine("Size = " + fullSize + " mb");
-            }
-        }
+         public override DateTime GetDate()
+         {
+             return _date;
+         }
+         
+         public override void GetLine()
+         {
+             Console.WriteLine("Date of creation - " + _date + ":");
+             if (_files.Count != 0)
+             {
+                 for (var i = 0; i < _files.Count; i++)
+                 {
+                     Console.WriteLine((i + 1) + ") " + "name = \"" +
+                                       _files[i].GetName() + "\"" + ", size = " +
+                                       _files[i].GetSize());
+                 }
+             }
+             else
+             {
+                 Console.WriteLine("Name = \"" + _name + "\"");   
+                 Console.WriteLine("Size - " + _fullSize);
+             }
+         }
+         public override int GetDiffSize()
+         {
+             throw new Exception("You don't need difference");
+         }
     }
 }
