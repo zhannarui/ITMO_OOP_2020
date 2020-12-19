@@ -1,0 +1,11 @@
+/Users/zannarui/Desktop/Lab4/Lab4/bin/Debug/netcoreapp2.1/Lab4.deps.json
+/Users/zannarui/Desktop/Lab4/Lab4/bin/Debug/netcoreapp2.1/Lab4.runtimeconfig.json
+/Users/zannarui/Desktop/Lab4/Lab4/bin/Debug/netcoreapp2.1/Lab4.runtimeconfig.dev.json
+/Users/zannarui/Desktop/Lab4/Lab4/bin/Debug/netcoreapp2.1/Lab4.dll
+/Users/zannarui/Desktop/Lab4/Lab4/bin/Debug/netcoreapp2.1/Lab4.pdb
+/Users/zannarui/Desktop/Lab4/Lab4/obj/Debug/netcoreapp2.1/Lab4.csprojAssemblyReference.cache
+/Users/zannarui/Desktop/Lab4/Lab4/obj/Debug/netcoreapp2.1/Lab4.csproj.CoreCompileInputs.cache
+/Users/zannarui/Desktop/Lab4/Lab4/obj/Debug/netcoreapp2.1/Lab4.AssemblyInfoInputs.cache
+/Users/zannarui/Desktop/Lab4/Lab4/obj/Debug/netcoreapp2.1/Lab4.AssemblyInfo.cs
+/Users/zannarui/Desktop/Lab4/Lab4/obj/Debug/netcoreapp2.1/Lab4.dll
+/Users/zannarui/Desktop/Lab4/Lab4/obj/Debug/netcoreapp2.1/Lab4.pdb
